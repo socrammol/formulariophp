@@ -20,4 +20,5 @@
     </pre>
      </form>
 </body>
+<script src="js/validade.js"></script>
 </html>
