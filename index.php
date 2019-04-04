@@ -1,8 +1,4 @@
-index.php
-<?php
-require_once 'UI_Comp_Formulario';
-UI_Comp_Formulario($validateScript);
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,15 +10,12 @@ UI_Comp_Formulario($validateScript);
 <body>
     <h1>Formulario de teste</h1>
     <br>
-    <form action="submit" method="POST">
+    <form action="UI_Comp_Formulario.php" name="form1" method="post" onsubmit="validate()">
     <pre>
-    Data:        <input type="text" size="20" maxlength="256" name="Data" $validateScript = $_POST[Data]
-    <?php echo UI_Comp_Formulario($validateScript)?>>
-    Texto:       <input type="text" size="20" maxlength="256" name="Texto" $validateScript = $_POST[Texto]
-    <?php echo UI_Comp_Formulario($validateScript)?>>
+    Data:        <input type="text" size="20" maxlength="256" name="Data">
+    Texto:       <input type="text" size="20" maxlength="256" name="Texto">
     Checkbox:    <input type="checkbox"  name="Checkbox">
-    Textogrande: <textarea rows="5" cols="52" name="Textogrande"$validateScript = $_POST[Textogrande]
-    <?php echo UI_Comp_Formulario($validateScript)?>></textarea>
+    Textogrande: <textarea rows="5" cols="52" name="Textogrande"></textarea>
     <input type="submit" value="submit" name="submit">
     </pre>
      </form>

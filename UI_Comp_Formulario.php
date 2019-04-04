@@ -1,14 +1,3 @@
-/*Caso o parâmetro $validateScript seja passado, 
-deverá associar ao onsubmit do formulário a ser 
-renderizado validações JavaScript para previnir o 
-submit do form com as seguintes regras:
-    • Data: deverá ser um campo de data no 
-    seguinte formato mm-dd-YYYY
-    • Texto: O texto só deverá possuir letras 
-    minúsculas e espaços, até 144 chars.
-
-    • Texto grande: O texto só deverá possuir 
-    letras maiúsculas, números e espaços até 255 chars.*/
 Ui_Comp_Formulario.php
 <?php
 class Ui_Comp_Formulario
