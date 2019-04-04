@@ -10,7 +10,7 @@
 <body>
     <h1>Formulario de teste</h1>
     <br>
-    <form action="UI_Comp_Formulario.php" name="form1" method="post" onsubmit="validate()">
+    <form action="UI_Comp_Formulario.php" name="form1" method="post" >
     <pre>
     Data:        <input type="text" size="20" maxlength="256" name="Data">
     Texto:       <input type="text" size="20" maxlength="256" name="Texto">
