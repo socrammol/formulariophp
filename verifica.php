@@ -18,9 +18,9 @@
             $ano = (int)$array[2];
             //testa se a data é válida
             if(checkdate($mes, $dia, $ano)){
-                echo "data '$Data' e valida'";
             }else{
                 echo "data '$Data' e invalida";
+                $erro = 1;
             }
         }else{
             echo "formato da data '$Data' invalido";
@@ -28,12 +28,17 @@
         //testando texto pequeno
        if (strlen($Texto) < 140 && preg_match_all('/[^A-Z0-9|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/', $Texto)){
        }else{
-           echo " o texto  não possui todas as letras minusculas $Texto";
+           echo " o texto: $Texto deve possuir letras minusculas e espaços ";
+           $erro = 1;
        }
        //testando texto grande
-        if (strlen($Texto) < 255 && preg_match_all('/[^a-z|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/', $Texto)){
+        if (strlen($Textogrande) < 255 && preg_match_all('/[^a-z0-9 |!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/', $Textogrande)){
        }else{
-           echo " o texto  não possui todas as letras minusculas $Texto";
+           echo " o texto:$Textogrande deve possuir letras maisuculas com espaços e numeros  ";
+           $erro = 1;
+       }
+       if($erro == 0){
+           echo "todos os dados foram inseridos corretamente";
        }
         ?>
     </body>
