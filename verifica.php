@@ -26,16 +26,15 @@
             echo "formato da data '$Data' invalido";
         }*/
         //testando texto pequeno
-       if (strlen($Texto) < 140 && preg_match_all('/[^A-Z0-9|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/', $Texto)){
+      /* if (strlen($Texto) < 140 && preg_match_all('/[^A-Z0-9|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/', $Texto)){
        }else{
            echo " o texto  não possui todas as letras minusculas $Texto";
-       }
+       }*/
        //testando texto grande
-        /*if (strlen($Texto) < 255 && ctype_upper($Texto)){
-
-        }else{
-            echo " o texto  não possui todas as letras maisuculas $Texto";
-        }*/
+        /*if (strlen($Texto) < 255 && preg_match_all('/[^a-z|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/', $Texto)){
+       }else{
+           echo " o texto  não possui todas as letras minusculas $Texto";
+       }*/
         ?>
     </body>
 </html>
