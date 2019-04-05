@@ -20,13 +20,13 @@ function validate(){
     }*/
     var array = Data.split("-");
     console.log(array)
-    /*if(array.length != 3)
+    if(array.length != 3)
     {
         alert('Data fora do padrão mm/dd/YYYY');
         return false;
-    }*/
+    }
     //garante que o array possue tres elementos (dia, mes e ano)
-    /*if(!array){
+    if(!array){
 
     }else
         if(array.length == 3) {
@@ -54,11 +54,11 @@ function validate(){
                 data.select();
             }
 
-            return valido;*/
+            return valido;
 
 
     //testando texto pequeno
-   /* const regex =/[^A-Z0-9|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/;
+    const regex =/[^A-Z0-9|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/;
     if(!Texto){
 
    }else {
@@ -69,7 +69,7 @@ function validate(){
            console.log(" o texto: $Texto deve possuir letras minusculas e espaços ")
            erro = 1;
        }
-   }*/
+   }
    //testando texto grande
     const regexM =/[^a-z|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/;
     if(!Textogrande){
