@@ -14,7 +14,7 @@ class Ui_Comp_Formulario
         $Data = $param [0];
         $Texto = $param [1];
         $Textogrande = $param [2];
-        
+        require_once('fragment/header.php');
         echo" 
                 <?php require_once('fragment/header.php'); ?>
                 <h1>Formulario de teste</h1>
@@ -24,11 +24,11 @@ class Ui_Comp_Formulario
                 Data:        <input value='$Data' type=\"text\" size=\"20\" maxlength=\"256\" name=\"Data\">
                 Texto:       <input value='$Texto' =\"text\" size=\"20\" maxlength=\"256\" name=\"Texto\">
                 Checkbox:    <input type=\"checkbox\"  name=\"Checkbox\">
-                Textogrande: <textarea value='$Textogrande' rows=\"5\" cols=\"52\" name=\"Textogrande\"></textarea>
+                Textogrande: <textarea type=\"text\" rows=\"5\" cols=\"52\" name=\"Textogrande\">$Textogrande</textarea>
                 <input type=\"submit\" value=\"submit\" name=\"submit\">
                 </pre>
      </form>
-     <?php require_once('fragment/footer.php'); ?>";
+     ";require_once('fragment/footer.php');
         
     }
 
