@@ -2,7 +2,7 @@
 <body>
      <div class="conatiner">
      <div class="head">
-    <h1 class="h1">Formulario de teste</h1>
+    <h1 class="h1">Formulário de teste</h1>
      </div>
     <form action="UI_Comp_Formulario.php"  name="form1" method="post">
     <div>
