@@ -76,14 +76,16 @@ function validate(){
 
     }else {
         if(Textogrande.search(regexM) != -1){
-            console.log("ok")
+            alert("ok")
         }
         else{
-            console.log(" o texto: $Texto deve possuir letras minusculas e espaços ")
+            alert(" o texto: $Texto deve possuir letras maisuculas numeros e espaços ")
             erro = 1;
         }
     }
     if(erro == 0){
         return valido;
+    }else{
+        alert("alguns dados não foram preenchidos corretamente")
     }
 }
