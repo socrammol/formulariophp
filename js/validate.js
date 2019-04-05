@@ -8,31 +8,30 @@ function validate(){
     var Texto        = document.getElementById('texto').value;
     var Textogrande  = document.getElementById('textogrande').value;
     var erro         = 0;
+    valido           = true;
     //testando data
     //criando um array
-   /* var regExpCaracter = /[^\d]/;     //Expressão regular para procurar caracter não-numérico.
-    var regExpEspaco = /^\s+|\s+$/g;  //Expressão regular para retirar espaços em branco.
-
-    if(stringData.length != 10)
-    {
-        alert('Data fora do padrão mm/dd/YYYY');
-        return false;
-    }*/
-    var array = Data.split("-");
-    console.log(array)
-    if(array.length != 3)
-    {
-        alert('Data fora do padrão mm/dd/YYYY');
-        return false;
-    }
+    
     //garante que o array possue tres elementos (dia, mes e ano)
-    if(!array){
+    if(!Data,!Texto,!Textogrande){
+        return valido;
+    }
+    if(!Data){
 
     }else
+    var array = Data.split("-");
+    if (array){if(array.length != 3)
+        {
+        alert('Data fora do padrão mm/dd/YYYY');
+        Data.focus();
+        erro = 1;
+        return false;
+        }
         if(array.length == 3) {
             if ((array[0].length != 2) || (array[1].length != 2) || (array[2].length != 4))
             {
-                alert('Data fora do padrão DD/MM/AAAA');
+                alert('Data fora do padrão mm/dd/YYYY');
+                erro = 1;
                 return false;
             }
             dia = array[1];
@@ -44,32 +43,33 @@ function validate(){
                 ||(MyData.getDate() != dia)
                 ||(MyData.getFullYear() != ano)){
                 data.focus();
+                erro = 1;
                 return false;}
                 //alert("Valores inválidos para o dia, mês ou ano. Por favor corrija.");
             else
                 console.log("data certa")
-            valido = true;
+            
             }if(valido == false){
                 data.focus();
                 data.select();
             }
+        }
+    
 
-            return valido;
-
-
+    
     //testando texto pequeno
     const regex =/[^A-Z0-9|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/;
     if(!Texto){
 
-   }else {
-        if(Texto.search(regex) != -1){
-            console.log("ok")
+    }else {
+            if(Texto.search(regex) != -1){
+                console.log("ok")
+            }
+            else{
+            alert(" o texto: $Texto deve possuir letras minusculas e espaços ")
+            erro = 1;
         }
-        else{
-           console.log(" o texto: $Texto deve possuir letras minusculas e espaços ")
-           erro = 1;
-       }
-   }
+    }
    //testando texto grande
     const regexM =/[^a-z|!|@|#|$|%|¨|&|*|(|)|-|_|+|=|§|¬|?]$/;
     if(!Textogrande){
@@ -82,5 +82,8 @@ function validate(){
             console.log(" o texto: $Texto deve possuir letras minusculas e espaços ")
             erro = 1;
         }
+    }
+    if(erro == 0){
+        return valido;
     }
 }

@@ -37,5 +37,5 @@ class Ui_Comp_Formulario
  $Data         = $_POST["Data"];
  $Texto        = $_POST["Texto"];
  $Textogrande  = $_POST["Textogrande"];
- $array =  [$Data,$Texto,$Textogrande];
- $uiData->renderer($array);
+ $param =  [$Data,$Texto,$Textogrande];
+ $uiData->renderer($param);
