@@ -42,9 +42,9 @@ function validate(){
             var MyData = new Date(ano, mes - 1, dia);
             if((MyData.getMonth() + 1 != mes)
                 ||(MyData.getDate() != dia)
-                ||(MyData.getFullYear() != ano))
+                ||(MyData.getFullYear() != ano)){
                 data.focus();
-                return false;
+                return false;}
                 //alert("Valores inválidos para o dia, mês ou ano. Por favor corrija.");
             else
                 console.log("data certa")
