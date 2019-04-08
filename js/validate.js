@@ -75,7 +75,7 @@ function validate(){
                 console.log("ok")
             }
             else{
-            alert(" o texto: $Texto deve possuir letras minusculas e espaços ")
+            alert(" o texto: deve possuir letras minusculas e espaços ")
             erro = 1;
         }
     }
@@ -88,7 +88,7 @@ function validate(){
             alert("ok")
         }
         else{
-            alert(" o texto: $Texto deve possuir letras maisuculas numeros e espaços ")
+            alert(" o texto:  deve possuir letras maisuculas numeros e espaços ")
             erro = 1;
         }
     }

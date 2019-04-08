@@ -14,15 +14,16 @@ class Ui_Comp_Formulario
         $Data = $param [0];
         $Texto = $param [1];
         $Textogrande = $param [2];
+        require_once('fragment/header.php');
         echo" 
-                <?php require_once('fragment/header.php'); ?>
+                <?php  ?>
                         <body>
                         <div class=\"conatiner\">
                                 <div class=\"head\">
-                                <h1 class=\"h1\">Formulário de teste</h1>
+                                <h1 class=\"h1\">Formulário de teste RENDER</h1>
                                 </div>
                                 <div class=\"formulario\">
-                                <form action=\"UI_Comp_Formulario.php\" name=\"form1\" method=\"post\">
+                                <form action=\"index.php\" name=\"form1\" method=\"post\">
                                         <div class=\"form\">
                                         <div>
                                                 <label for=\"data\">Data:</label>
@@ -53,11 +54,10 @@ class Ui_Comp_Formulario
                                 </div>
                         </div>
                         </body>
-        <?php require_once('fragment/footer.php'); ?>
+        <?php  ?>
      ";
-        
+     require_once('fragment/footer.php');   
     }
-
 }
  $uiData = new Ui_Comp_Formulario();
  $Data         = $_POST["data"];
