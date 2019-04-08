@@ -14,28 +14,54 @@ class Ui_Comp_Formulario
         $Data = $param [0];
         $Texto = $param [1];
         $Textogrande = $param [2];
-        require_once('fragment/header.php');
         echo" 
                 <?php require_once('fragment/header.php'); ?>
-                <h1>Formulario de teste</h1>
-                <br>
-                <form action=\"index.php\" name=\"form1\" method=\"post\" onsubmit=\"validate()\">
-                <pre>
-                Data:        <input value='$Data' type=\"text\" size=\"20\" maxlength=\"256\" name=\"Data\">
-                Texto:       <input value='$Texto' =\"text\" size=\"20\" maxlength=\"256\" name=\"Texto\">
-                Checkbox:    <input type=\"checkbox\"  name=\"Checkbox\">
-                Textogrande: <textarea type=\"text\" rows=\"5\" cols=\"52\" name=\"Textogrande\">$Textogrande</textarea>
-                <input type=\"submit\" value=\"submit\" name=\"submit\">
-                </pre>
-     </form>
-     ";require_once('fragment/footer.php');
+                        <body>
+                        <div class=\"conatiner\">
+                                <div class=\"head\">
+                                <h1 class=\"h1\">Formulário de teste</h1>
+                                </div>
+                                <div class=\"formulario\">
+                                <form action=\"UI_Comp_Formulario.php\" name=\"form1\" method=\"post\">
+                                        <div class=\"form\">
+                                        <div>
+                                                <label for=\"data\">Data:</label>
+                                                <input value='$Data' type=\"text\" size=\"20\" maxlength=\"255\" name=\"data\" id=\"data\">
+                                        </div>
+
+                                        <div>
+                                                <label for=\"texto\">Texto:</label>
+                                                <input  value='$Texto' type=\"text\" size=\"20\" maxlength=\"256\" name=\"texto\" id=\"texto\">
+                                        </div>
+
+                                        <div>
+                                                <label for=\"checkbox\">Checkbox:</label>
+                                                <input type=\"checkbox\" name=\"Checkbox\">
+                                        </div>
+
+                                        <div>
+                                                <label for=\"textogrande\" class=\"label-area\">Textogrande:</label>
+                                                <textarea rows=\"8\" cols=\"40\" name=\"Textogrande\" id=\"textogrande\">$Textogrande</textarea>
+                                        </div>
+
+                                        <input type=\"submit\" value=\"Submit\" name=\"submit\" onclick=\"return validate()\">
+                                        </div>
+                                        <div class=\"desc-form\">
+                                        Teste de formulário
+                                        </div>
+                                </form>
+                                </div>
+                        </div>
+                        </body>
+        <?php require_once('fragment/footer.php'); ?>
+     ";
         
     }
 
 }
  $uiData = new Ui_Comp_Formulario();
- $Data         = $_POST["Data"];
- $Texto        = $_POST["Texto"];
+ $Data         = $_POST["data"];
+ $Texto        = $_POST["texto"];
  $Textogrande  = $_POST["Textogrande"];
  $param =  [$Data,$Texto,$Textogrande];
  $uiData->renderer($param);
