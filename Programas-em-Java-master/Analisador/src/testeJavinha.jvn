@@ -1,0 +1,13 @@
+public class ID {
+
+   // metodo construtor
+   void teste1( ) { 
+      println("metodo faz nada");
+   } 
+
+   public static void main ( ) { 
+      println("chamada para um metodo"); 
+      teste1( );
+   }
+}
+
