@@ -264,19 +264,27 @@ public class ParsingTable {
     };
     
     //Não Terminais da Gramática
-    static String[] nonTerminals = {"Programa", "Classe", "DeclaracaoVar", "ListaMetodo", "ListaMetodo’'", "Metodo", "RegexListaParam", "RegexDeclaraVar", 
-                                    "ListaParam", "ListaParam’", "Param", "Retorno", "Main", 
-                                    "Tipo", "ListaCmd", "ListaCmd’", "Cmd", "Cmd’", "CmdIF",
-                                    "CmdIF’", "CmdWhile", "CmdPrint", "CmdPrintln", "CmdAtrib", "CmdMetodo",
-                                    "Expressao", "Exp’", "Exp1", "Exp1’", "Exp2",
-									"Exp2’", "Exp3", "Exp3’", "Exp4", "Exp4’",
-									"RegexExp4", "RegexExp4’", "OpUnario"};
+    static String[] nonTerminals = {"Programa","Classe","DeclaracaoVar",
+                                    "ListaMetodo","ListaMetodo’","Metodo",
+                                    "RegexListaParam","RegexDeclaraVar",
+                                    "ListaParam","ListaParam’","Param","Retorno",
+                                    "Main","Tipo","ListaCmd","ListaCmd’","Cmd",
+                                    "Cmd’","CmdIF","CmdIF’","CmdWhile",
+                                    "CmdPrint","CmdPrintln","CmdAtrib",
+                                    "CmdMetodo","Expressao","Exp’","Exp1",
+                                    "Exp1’","Exp2","Exp2’","Exp3","Exp3’",
+                                    "Exp4","Exp4’","RegexExp4","RegexExp4’",
+                                    "OpUnario"};
     
     //Terminais da Gramática
-    static String[] terminals = {"public","$", "class", "ID","{", "}", ";",  "(", ")", ",","return","main","boolean","int", "string","float",
-								"void", "if", "else", "while","print","println","=","&&","||",
-								"<","<=",">",">=","==","!=", "+", "-", "*", "/",
-                                "ConstInteira", "ConstReal", "ConstString", "true","false", "- (negação)","!","$"};    
+    static String[] terminals = {"public","$","class","ID","{","}",";",
+                                    "(",")",",","return","main","boolean",
+                                    "int","string","float","void","if",
+                                    "else","while","print","println","=",
+                                    "&&","||","<","<=",">",">=","“==”","!=",
+                                    "+","-","*","/","ConstInteira","ConstReal",
+                                    "ConstString","true","false","- (negação)",
+                                    "!"};    
     
 }
 
